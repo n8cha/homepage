@@ -25,6 +25,7 @@
     margin: 2em;
     height: 95%;
     background-color: #f4f7fb;
+    outline-style: none;
 }
 
 #notepad {
@@ -33,4 +34,5 @@
     height: 80vh;
     font-size: 1em;
     font-weight: 280;
+    outline-style: none;
 }
