@@ -1,0 +1,36 @@
+@font-face {
+    font-family: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+    src: url(https://github.com/IBM/plex);
+}
+
+#homepage {
+    font-family: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+}
+
+.heading {
+    display: flex;
+    justify-content: left;
+    margin-left: 2.25em;
+}
+
+#header {
+    font-size: 2em;
+    font-weight: 200;
+    color: #152935;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    height: 95%;
+    background-color: #f4f7fb;
+}
+
+#notepad {
+    border: none;
+    width: 100vw;
+    height: 80vh;
+    font-size: 1em;
+    font-weight: 280;
+}
