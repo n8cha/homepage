@@ -10,15 +10,18 @@
         <!-- persist contents of notepad during a browser session -->
         <script>
             // repopulate notes with values from session on page reload
-            window.onload = function() {
-                if (sessionStorage.getItem('notes') !== null) {
-                    document.getElementById("notepad").innerHTML = sessionStorage.getItem("notes");
+            if (typeof(Storage) !== "undefined") {
+                
+                window.onload = function() {
+                    if (localStorage.getItem('notes') !== null) {
+                        document.getElementById("notepad").innerHTML = localStorage.getItem("notes");
+                    }
                 }
-            }
             
-            // save notepad data to session to allow persistence
-            window.onbeforeunload = function() {
-                sessionStorage.setItem("notes", document.getElementById("notepad").value);
+                // save notepad data to session to allow persistence
+                window.onbeforeunload = function() {
+                    localStorage.setItem("notes", document.getElementById("notepad").value);
+                }
             }
         </script>
 	</head>
