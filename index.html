@@ -2,10 +2,25 @@
 
 <html>
 	<head>
-		<title>// notes //</title>
+		<title>// notes</title>
 		<meta charset="utf-8" />
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
 		<link rel="stylesheet" href="style.css" />
+        
+        <!-- persist contents of notepad during a browser session -->
+        <script>
+            // repopulate notes with values from session on page reload
+            window.onload = function() {
+                if (sessionStorage.getItem('notes') !== null) {
+                    document.getElementById("notepad").innerHTML = sessionStorage.getItem("notes");
+                }
+            }
+            
+            // save notepad data to session to allow persistence
+            window.onbeforeunload = function() {
+                sessionStorage.setItem("notes", document.getElementById("notepad").value);
+            }
+        </script>
 	</head>
 	<body id="homepage">
 
@@ -13,12 +28,7 @@
             <p id="header">notes</p>
         </div>
         <div class="main-container">
-            <textarea id="notepad" autofocus>
-                
-            </textarea>
-        
-        
+            <textarea id="notepad" autofocus></textarea>
         </div>
-        
     </body>
 </html>

@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     margin: 2em;
+    margin-top: 1em;
     height: 95%;
     background-color: #f4f7fb;
     outline-style: none;
@@ -31,8 +32,10 @@
 #notepad {
     border: none;
     width: 100vw;
-    height: 80vh;
+    height: 75vh;
     font-size: 1em;
     font-weight: 280;
     outline-style: none;
+    resize: none;
+    line-height: 1.4em;
 }
