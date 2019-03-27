@@ -10,7 +10,7 @@
 .heading {
     display: flex;
     justify-content: left;
-    margin-left: 2.25em;
+    margin-left: 10.25em;
 }
 
 #header {
@@ -24,6 +24,8 @@
     justify-content: center;
     margin: 2em;
     margin-top: 1em;
+    margin-right: 10em;
+    margin-left: 10em;
     height: 95%;
     background-color: #f4f7fb;
     outline-style: none;
