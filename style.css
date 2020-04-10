@@ -30,9 +30,6 @@
     background-color: #f4f7fb;
     outline-style: none;
 }
-.main-container::-webkit-scrollbar {
-    width: 0 !important;
-}
 
 #notepad {
     border: none;
@@ -43,4 +40,7 @@
     outline-style: none;
     resize: none;
     line-height: 1.4em;
+}
+#notepad::-webkit-scrollbar {
+    width: 0 !important;
 }
