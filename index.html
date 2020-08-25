@@ -17,12 +17,16 @@
                         document.getElementById("notepad").innerHTML = localStorage.getItem("notes");
                     }
                 }
+
+                document.onkeypress = function() {
+                    localStorage.setItem("notes", document.getElementById("notepad").value);
+                }
             
                 // save notepad data to browser storage to allow persistence
                 // note: this isn't very secure, so don't type anything sensitive
-                window.onbeforeunload = function() {
-                    localStorage.setItem("notes", document.getElementById("notepad").value);
-                }
+                // window.onbeforeunload = function() {
+                //     localStorage.setItem("notes", document.getElementById("notepad").value);
+                // }
             }
         </script>
 	</head>
