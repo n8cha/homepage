@@ -1,5 +1,5 @@
 @font-face {
-    font-family: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+    font-family: IBM Plex;
     src: url(https://github.com/IBM/plex);
 }
 
@@ -32,11 +32,12 @@
 }
 
 #notepad {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier', monospace;
     border: none;
     width: 100vw;
     height: 75vh;
-    font-size: 1em;
-    font-weight: 280;
+    font-size: 1.10em;
+    font-weight: 400;
     outline-style: none;
     resize: none;
     line-height: 1.4em;
