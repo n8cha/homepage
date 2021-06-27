@@ -1,42 +1,38 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>// notes</title>
-		<meta charset="utf-8" />
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-		<link rel="stylesheet" href="style.css" />
-        
-        <!-- persist contents of notepad in browser's local storage -->
-        <script>
-            // repopulate notes with values from browser storage on page reload
-            if (typeof(Storage) !== "undefined") {
-                
-                window.onload = function() {
-                    if (localStorage.getItem('notes') !== null) {
-                        document.getElementById("notepad").innerHTML = localStorage.getItem("notes");
-                    }
-                }
+  <head>
+    <title>// notes</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <link rel="stylesheet" href="style.css" />
 
-                document.onkeyup = function() {
-                    localStorage.setItem("notes", document.getElementById("notepad").value);
-                }
-            
-                // save notepad data to browser storage to allow persistence
-                // note: this isn't very secure, so don't type anything sensitive
-                // window.onbeforeunload = function() {
-                //     localStorage.setItem("notes", document.getElementById("notepad").value);
-                // }
-            }
-        </script>
-	</head>
-	<body id="homepage">
+    <!-- persist contents of notepad in browser's local storage -->
+    <script>
+      // repopulate notes with values from browser storage on page reload
+      if (typeof(Storage) !== "undefined") {
 
-        <div class="heading">
-            <p id="header">notes</p>
-        </div>
-        <div class="main-container">
-            <textarea id="notepad" placeholder="This is your personal scratchpad. Feel free to jot down notes, clip and paste memorable quotes, or just draft stuff. Protip: make your browser full-screen for maximum focus." autofocus tabindex="-1"></textarea>
-        </div>
-    </body>
+        window.onload = function() {
+          if (localStorage.getItem('notes') !== null) {
+            document.getElementById("notepad").innerHTML = localStorage.getItem("notes");
+          }
+        }
+
+        document.onkeyup = function() {
+          if (localStorage.getItem('notes') !== null) {
+            localStorage.setItem("notes", document.getElementById("notepad").value);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body id="homepage">
+
+    <div class="heading">
+      <p id="header">notes</p>
+    </div>
+    <div class="main-container">
+      <textarea id="notepad" placeholder="This is your personal scratchpad. Feel free to jot down notes, clip and paste memorable quotes, or just draft stuff. Protip: make your browser full-screen for maximum focus." autofocus tabindex="-1"></textarea>
+    </div>
+  </body>
 </html>
