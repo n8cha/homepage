@@ -19,7 +19,7 @@
         }
 
         document.onkeyup = function() {
-          if (localStorage.getItem('notes') !== null) {
+          if (document.getElementById("notepad").value) {
             localStorage.setItem("notes", document.getElementById("notepad").value);
           }
         }
